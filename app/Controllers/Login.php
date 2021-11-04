@@ -34,7 +34,8 @@ class Login extends BaseController{
         }else{
 
             $vl = (new Pengguna12200409())->cekLogin($email, $sandi);
-
+            dd($vl);
+            
             if($vl == null){
                 return redirect()->to('/login')->with('error', 'User dan sandi salah');
             }else{
